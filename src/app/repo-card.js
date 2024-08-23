@@ -1,8 +1,13 @@
-export default function RepoCard({ repos }) {
+"use client"
+import { useState } from "react";
+export default function RepoCard({ visable }) {
+    
+   
+
     return (
-      <div className="flex flex-wrap justify-center gap-4 mt-8 mb-8">
-        {repos.map((repo) => (
-          <div key={repo.id} className="relative flex flex-col p-3 gap-y-2 bg-gradient-to-r from-[#131729] to-[#1c1b46] rounded-[10px] w-[300px]">
+      <div className="flex flex-col items-center gap-6 mt-8 mb-7 lg:grid lg:grid-cols-2 ">
+        {visable.map((repo) => (
+          <div key={repo.id} className="relative flex flex-col p-3 gap-y-2 bg-gradient-to-r from-[#131729] to-[#1c1b46] rounded-[10px] w-[75%] max-w-[750px] lg:w-[370px] xl:w-[550px]">
             <h1 className="text-[#cdd5e0]">{repo.name}</h1>
             <p className="text-[#95a3b7] mb-9">{repo.description}</p>
             <div className=" absolute bottom-3 flex gap-x-4 mt-2">
@@ -33,6 +38,7 @@ export default function RepoCard({ repos }) {
             </div>
           </div>
         ))}
+        
       </div>
     );
   }
