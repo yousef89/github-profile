@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <div className="relative bg-[#1f2939] min-h-screen flex flex-col items-center">
       <img src="/planet.png" className="absolute top-0 left-0 w-[2560px] h-auto "  alt="planet" />
-      <div className="z-10 w-[450px] h-[50px] max-w-[600px] flex items-center bg-[#1f2939] p-2 mt-8 gap-x-2 rounded-[10px] pl-5">
+      <div className="z-10 w-[450px] h-[50px] xsm:w-[300px] xsm:h-[30px] sm:w-[400px] sm:h-[40px] max-w-[600px] flex items-center bg-[#1f2939] p-2 mt-8 gap-x-2 rounded-[10px] pl-5">
         <svg className=" cursor-pointer"
         onClick={fetchData}
           width="24"
@@ -77,7 +77,7 @@ export default function Home() {
           />
         </svg>
         <input
-          className="bg-[#202a3a] w-[100%] h-[50px] text-[#4A5567] ml-auto outline-none placeholder-[#4A5567]"
+          className="bg-[#202a3a] w-[100%] h-[100%] text-[#4A5567] ml-auto outline-none placeholder-[#4A5567]"
           value={username}
           onKeyDown={handleKeyDown}
           onChange={handleSearch}
@@ -88,7 +88,7 @@ export default function Home() {
       {data && (
         <>
           <UserInfo data={data} />
-          <div className="flex flex-col w-[450px] lg:w-[700px] xl:w-[1100px] max-w-[800px] mr-[20px] mt-10">
+          <div className="flex flex-col w-[450px] xsm:w-[250px] lg:w-[700px] xl:w-[1100px] max-w-[800px] mr-[20px] mt-10">
             <h1 className="text-[#cdd5e0] text-[25px]">{data?.name || 'No name available'}</h1>
             <p className="text-[#95a3b7] break-words mt-2">{data?.bio || 'No bio available'}</p>
           </div>

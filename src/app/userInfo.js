@@ -2,7 +2,7 @@ export default function UserInfo({data}){
 
     return(
         <div className="z-10">
-            <div className="mt-5 mr-[60px] lg:mt-[80px] xl:mt-[160px] xl:mr-[200px]  flex gap-x-8 min-w-[400px]">
+            <div className="mt-5  lg:mt-[80px] xl:mt-[160px] xl:mr-[200px]  flex gap-x-8 min-w-[330px] ">
                 <div className="border-[10px] border-[#1f2939] rounded-[20px]">
                 {data.avatar_url != null ? (<img src={data.avatar_url} className=" size-[100px] rounded-[9px]" ></img>)
                 :(<img src="images.jpeg" className=" size-[100px] rounded-[7px]" ></img>)}
